@@ -59,7 +59,7 @@ st.markdown("""
         color: #155724;
     }
     </style>
-# """, unsafe_with_html=True)
+""", unsafe_allow_html=True)
 
 # Application Header
 st.title("🔒 Quantum Cryptographic Exposure Analyzer")
@@ -211,7 +211,7 @@ with tab1:
                     <p style='margin-bottom:6px;'><b>Confidentiality (y):</b> {s_y} yrs | <b>Migration (x):</b> {s_x} yrs | <b>Total (y+x):</b> {s_span} yrs</p>
                     <p style='margin-bottom:0px;'>{s_msg}</p>
                 </div>
-            """, unsafe_with_html=True)
+         """, unsafe_allow_html=True)
             
     with col_b:
         st.markdown("#### 📥 Export Assessment")
