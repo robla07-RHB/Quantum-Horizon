@@ -245,16 +245,16 @@ with tab1:
             
             if s_tier == "CRITICAL DEFICIT":
                 c_class = "critical"
-                s_msg = f"🚨 <b>CRITICAL EXPOSURE DEFICIT (+{s_deficit} yrs overhang):</b> Mosca's inequality is triggered ($x+y > z$). Encrypted records captured today will be retroactively decrypted **{s_deficit} years** before PQC migration completes!"
+                s_msg = f"🚨 <b>CRITICAL EXPOSURE DEFICIT (+{s_deficit} yrs overhang):</b> Mosca's inequality is triggered (x+y > z). Encrypted records captured today will be retroactively decrypted **{s_deficit} years** before PQC migration completes!"
             elif s_tier == "HIGH DEFICIT":
                 c_class = "high"
                 s_msg = f"⚠️ <b>HIGH EXPOSURE DEFICIT (+{s_deficit} yrs overhang):</b> Active HNDL risk! Your total target span exceeds the quantum horizon by **{s_deficit} years**. Accelerated CBOM discovery and hybrid PQC cutover required."
             elif s_tier == "THIN MARGIN":
                 c_class = "thin"
-                s_msg = f"⚡ <b>THIN SECURITY MARGIN ({s_slack} yrs safe):</b> Security buffer is narrow ($s = {s_slack}$ yrs). Immediate CBOM auditing and PQC migration planning required to prevent deficit."
+                s_msg = f"⚡ <b>THIN SECURITY MARGIN ({s_slack} yrs safe):</b> Security buffer is narrow (s = {s_slack} yrs). Immediate CBOM auditing and PQC migration planning required to prevent deficit."
             else:
                 c_class = "secure"
-                s_msg = f"✅ <b>SECURE MARGIN ({s_slack} yrs safe):</b> Safe security buffer ($s = {s_slack}$ yrs). Total target span is within the projected quantum threat horizon."
+                s_msg = f"✅ <b>SECURE MARGIN ({s_slack} yrs safe):</b> Safe security buffer (s = {s_slack} yrs). Total target span is within the projected quantum threat horizon."
                 
             st.markdown(f"""
                 <div class='report-card {c_class}'>
