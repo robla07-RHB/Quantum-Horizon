@@ -75,16 +75,16 @@ st.markdown("""
 
 # Application Header
 st.title("🔒 Quantum Cryptographic Exposure Analyzer")
-st.caption("Audited Mosca's Inequality Risk Modeler ($x + y > z$) | RHBSciAdvisory GmbH Enterprise Advisory Suite")
+st.caption("Audited Mosca's Inequality Risk Modeler (x + y > z) | RHBSciAdvisory GmbH Enterprise Advisory Suite")
 
 # Governance Disclaimer
 st.markdown("""
 <div class='disclaimer-box'>
 <b>⚠️ Governance Audit Disclaimer & Methodology Alignment:</b><br>
 This diagnostic tool evaluates enterprise exposure to <b>Harvest Now, Decrypt Later (HNDL)</b> threats using 
-<b>Mosca's Timing Inequality</b> ($x + y > z$, Mosca 2015). Variable definitions are aligned directly with primary literature: 
+<b>Mosca's Timing Inequality</b> (x + y > z, Mosca 2015). Variable definitions are aligned directly with primary literature: 
 <b>x</b> = Confidentiality Span / Security Shelf-Life, <b>y</b> = Migration Timeline, and <b>z</b> = Threat Horizon. 
-Signed Slack ($s = z - (x + y)$) determines risk posture. This tool is an enterprise timing predicate for governance, not a hardware forecast or formal compliance certification.
+Signed Slack (s = z - (x + y)) determines risk posture. This tool is an enterprise timing predicate for governance, not a hardware forecast or formal compliance certification.
 </div>
 """, unsafe_allow_html=True)
 
