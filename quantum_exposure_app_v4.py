@@ -71,7 +71,7 @@ st.markdown("""
         margin-bottom: 15px;
     }
     </style>
-""", unsafe_with_html=True)
+""", unsafe_allow_html=True)
 
 # Application Header
 st.title("🔒 Quantum Cryptographic Exposure Analyzer")
@@ -86,7 +86,7 @@ This diagnostic tool evaluates enterprise exposure to <b>Harvest Now, Decrypt La
 <b>x</b> = Confidentiality Span / Security Shelf-Life, <b>y</b> = Migration Timeline, and <b>z</b> = Threat Horizon. 
 Signed Slack ($s = z - (x + y)$) determines risk posture. This tool is an enterprise timing predicate for governance, not a hardware forecast or formal compliance certification.
 </div>
-""", unsafe_with_html=True)
+""", unsafe_allow_html=True)
 
 # Sidebar Controls
 st.sidebar.image("https://img.icons8.com/color/96/shield-against-piracy.png", width=64)
@@ -196,11 +196,11 @@ def classify_risk(row):
 df["Risk Tier"] = df.apply(classify_risk, axis=1)
 
 # Main Navigation Tabs
-tab1, tab2, tab3, tab4 = st.tabs([
+tab1, tab2, tab3 = st.tabs([
     "📊 Executive Dashboard", 
     "🗺️ Interactive Risk Boundary Map", 
     "📋 Tailored PQC & CBOM Action Plan", 
-    "🌐 Deployment & Embedding"
+   
 ])
 
 # TAB 1: EXECUTIVE DASHBOARD
@@ -414,42 +414,7 @@ with tab3:
         *   **Symmetric Security Note:** Quantum threats to symmetric encryption (Grover's algorithm) require key expansion to **AES-256** and **SHA-384/512** (not protocol replacement). Note: Legacy SHA-1 represents a classical collision vulnerability.
         """)
 
-# TAB 4: WEB DEPLOYMENT GUIDE
-with tab4:
-    st.markdown("### 🌐 Production Web Deployment & Embedding")
-    
-    st.markdown("""
-    Streamlit applications are natively web-ready. Deploy this app using any of the three patterns below:
 
-    ---
-    #### Option 1: Streamlit Community Cloud (1-Click Hosting)
-    1. Push `quantum_exposure_app_v2.py`, `requirements.txt`, and `Dockerfile` to your GitHub repository.
-    2. Connect your repo at [share.streamlit.io](https://share.streamlit.io).
-    3. Click **Deploy** — your interactive risk tool will be live at `https://your-org.streamlit.app`.
-
-    ---
-    #### Option 2: Embed onto Corporate Portal (WordPress, Webflow, React, HTML)
-    Embed the live application directly into any web portal using a responsive `<iframe>`:
-
-    ```html
-    <iframe
-        src="https://your-org.streamlit.app/?embedded=true"
-        width="100%"
-        height="850px"
-        style="border: none; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"
-        title="RHBSciAdvisory Quantum Exposure Analyzer">
-    </iframe>
-    ```
-
-    ---
-    #### Option 3: Enterprise Container Deployment (AWS ECS, Azure App Service, Cloud Run)
-    Build and run using the production Docker container:
-
-    ```bash
-    docker build -t quantum-exposure-app .
-    docker run -p 8501:8501 quantum-exposure-app
-    ```
-    """)
 
 # Footer
 st.markdown("---")
