@@ -262,7 +262,7 @@ with tab1:
                     <p style='margin-bottom:6px;'><b>Confidentiality (x):</b> {s_x} yrs | <b>Migration (y):</b> {s_y} yrs | <b>Target Span (x+y):</b> {s_span} yrs | <b>Horizon (z):</b> {z} yrs</p>
                     <p style='margin-bottom:0px;'>{s_msg}</p>
                 </div>
-            """, unsafe_with_html=True)
+            """, unsafe_allow_html=True)
             
     with col_b:
         st.markdown("#### 📥 Audit-Grade Export Data")
